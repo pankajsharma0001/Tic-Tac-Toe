@@ -8,43 +8,54 @@ body {
     background-color: #548687;
     text-align: center;
     font-family: 'Segoe UI', sans-serif;
-    padding: 2rem;
     color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    overflow: hidden;
 }
 
 h1 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+    font-size: 5vmin;
+    margin-bottom: 1vmin;
+}
+
+#turn-indicator {
+    font-size: 4vmin;
+    margin-bottom: 2vmin;
+    color: #ffffc7;
 }
 
 .container {
-    height: 70vh;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .game {
-    height: 60vmin;
     width: 60vmin;
+    height: 60vmin;
     display: flex;
     flex-wrap: wrap;
+    gap: 1vmin;
     justify-content: center;
     align-items: center;
-    gap: 1.5vmin;
 }
 
 .box {
-    height: 18vmin;
     width: 18vmin;
+    height: 18vmin;
+    font-size: 8vmin;
     border-radius: 1rem;
     border: none;
     background-color: #fff;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
-    font-size: 8vmin;
     color: #b0413e;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
     user-select: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 .box:hover {
@@ -53,50 +64,8 @@ h1 {
     transform: scale(1.05);
 }
 
-#reset, #new-btn {
-    padding: 1rem 2rem;
-    font-size: 1.25rem;
-    background-color: #191913;
-    color: #fff;
-    border-radius: 1rem;
-    border: none;
-    margin: 1rem 0.5rem;
-    transition: background-color 0.3s ease;
-}
-
-#reset:hover,
-#new-btn:hover {
-    background-color: #333;
-    cursor: pointer;
-}
-
-#msg {
-    color: #ffffc7;
-    font-size: 5vmin;
-    margin-bottom: 1rem;
-}
-
-.msg-container {
-    height: 20vmin;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.hide {
-    display: none;
-}
-
-#turn-indicator {
-    font-size: 2rem;
-    color: #ffffc7;
-    margin-bottom: 1rem;
-}
-
-
 .winning-box {
-    background-color: #90ee90 !important; /* Light green */
+    background-color: #90ee90 !important;
     color: #000;
     font-weight: bold;
     animation: flash 0.8s ease-in-out infinite alternate;
@@ -105,4 +74,41 @@ h1 {
 @keyframes flash {
     from { transform: scale(1); }
     to { transform: scale(1.1); }
+}
+
+#reset, #new-btn {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    background-color: #191913;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    margin: 1rem 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+#reset:hover, #new-btn:hover {
+    background-color: #333;
+    cursor: pointer;
+}
+
+#msg {
+    font-size: 5vmin;
+    color: #ffffc7;
+    margin-bottom: 1rem;
+}
+
+.msg-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.msg-container.show {
+    display: flex;
+}
+
+footer {
+    margin-top: auto;
 }
