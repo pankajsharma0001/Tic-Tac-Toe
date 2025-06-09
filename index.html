@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tick-Tak-Toe Game</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <h1>Tick-Tak-Toe Game</h1>
+    <p id="turn-indicator">Turn: O</p>
+    <section class="msg-container hide" aria-live="polite">
+        <p id="msg">Winner</p>
+        <button id="new-btn" aria-label="Start a new game">New Game</button>
+    </section>
+    <main>
+        <div class="container">
+            <div class="game">
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+            </div>
+        </div>
+        <button id="reset">Reset Game</button>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
