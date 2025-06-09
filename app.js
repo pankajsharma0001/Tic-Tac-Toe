@@ -19,7 +19,7 @@ const resetGame = () => {
     turn0 = true;
     moveCount = 0;
     enableBoxes();
-    msgContainer.classList.add("hide");
+    msgContainer.classList.remove("show");
     turnIndicator.innerText = "Turn: O";
 };
 
@@ -39,13 +39,13 @@ const disableBoxes = () => {
 
 const showWinner = (winner) => {
     msg.innerText = `🎉 Winner: ${winner}`;
-    msgContainer.classList.remove("hide");
+    msgContainer.classList.add("show");
     disableBoxes();
 };
 
 const showDraw = () => {
     msg.innerText = "It's a draw!";
-    msgContainer.classList.remove("hide");
+    msgContainer.classList.add("show");
 };
 
 const checkWinner = () => {
